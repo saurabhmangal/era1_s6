@@ -96,5 +96,20 @@ The below image is pattern of the total loss with respect to each step for diffe
 **PART 2**
 
 
+The provided code appears to be a Python script that implements a convolutional neural network (CNN) in order to classify images using the MNIST dataset. Here's an overview of the code:
 
+The code begins by importing necessary libraries such as torch, torch.nn, torch.optim, torchvision, and matplotlib.
 
+It defines a CNN model by creating a subclass of the nn.Module class from PyTorch. This model comprises several convolutional layers, batch normalization layers, dropout layers, and pooling layers.
+
+The model is initialized, and a summary of its architecture is printed using the torchsummary library.
+
+Next, the code sets up data loaders for training and testing the model on the MNIST dataset. The dataset is normalized and split into batches.
+
+The code utilizes matplotlib to plot some sample images from the dataset.
+
+It defines functions for training and testing the model. The training function trains the model on the training dataset using stochastic gradient descent (SGD) optimization, while the testing function evaluates the model's performance on the test dataset.
+
+The model is instantiated, an optimizer is defined, and the training and testing functions are invoked to train and evaluate the model, respectively.
+
+In summary, this code establishes and trains a CNN model for image classification using PyTorch, specifically designed to work with the MNIST dataset.
