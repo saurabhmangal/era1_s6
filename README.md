@@ -15,7 +15,7 @@ The backpropagation method requires not only but also the gradients of total err
 The gradients are calculated by converting them to a algebraic equation.
 
 **First Set of Formula**
-h1 = w1*i1 + w2*i2
+h1 = w1*i1 + w2*i2 \n
 h2 = w3*i1 + w4*i2
 a_h1 = σ(h1) = 1/(1 + exp(-h1))
 a_h2 = σ(h2)
