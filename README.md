@@ -14,7 +14,7 @@ The backpropagation method requires not only but also the gradients of total err
 
 The gradients are calculated by converting them to a algebraic equation.
 
-**First Set of Formula**  <br />
+**First Set of Formula** <br />
 h1 = w1*i1 + w2*i2  <br />                
 h2 = w3*i1 + w4*i2  <br />
 a_h1 = σ(h1) = 1/(1 + exp(-h1))  <br />
@@ -27,38 +27,38 @@ E_total = E1 + E2     <br />
 E1 = ½ * (t1 - a_o1)²  <br />
 E2 = ½ * (t2 - a_o2)²	<br />	
 
-**Second Set of Formula**
-∂E_total/∂w5 = ∂(E1 + E2)/∂w5					
-∂E_total/∂w5 = ∂E1/∂w5					
-∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1*∂a_o1/∂o1*∂o1/∂w5					
-∂E1/∂a_o1 =  ∂(½ * (t1 - a_o1)²)/∂a_o1 = (a_01 - t1)					
-∂a_o1/∂o1 =  ∂(σ(o1))/∂o1 = a_o1 * (1 - a_o1)					
-∂o1/∂w5 = a_h1		
+**Second Set of Formula**<br />
+∂E_total/∂w5 = ∂(E1 + E2)/∂w5<br />					
+∂E_total/∂w5 = ∂E1/∂w5		<br />			
+∂E_total/∂w5 = ∂E1/∂w5 = ∂E1/∂a_o1*∂a_o1/∂o1*∂o1/∂w5<br />					
+∂E1/∂a_o1 =  ∂(½ * (t1 - a_o1)²)/∂a_o1 = (a_01 - t1)	<br />				
+∂a_o1/∂o1 =  ∂(σ(o1))/∂o1 = a_o1 * (1 - a_o1)		<br />			
+∂o1/∂w5 = a_h1		<br />
 
-**Third Set of Formula**
-**∂E_total/∂w5 = (a_01 - t1) * a_o1 * (1 - a_o1) *  a_h1	**				
-**∂E_total/∂w6 = (a_01 - t1) * a_o1 * (1 - a_o1) *  a_h2	**				
-**∂E_total/∂w7 = (a_02 - t2) * a_o2 * (1 - a_o2) *  a_h1	**				
-**∂E_total/∂w8 = (a_02 - t2) * a_o2 * (1 - a_o2) *  a_h2	**
+**Third Set of Formula**   <br />
+**∂E_total/∂w5 = (a_01 - t1) * a_o1 * (1 - a_o1) *  a_h1	**	<br />			
+**∂E_total/∂w6 = (a_01 - t1) * a_o1 * (1 - a_o1) *  a_h2	**	<br />			
+**∂E_total/∂w7 = (a_02 - t2) * a_o2 * (1 - a_o2) *  a_h1	**	<br />			
+**∂E_total/∂w8 = (a_02 - t2) * a_o2 * (1 - a_o2) *  a_h2	**      <br />
 
-**Fourth Set of Formula**				
-∂E1/∂a_h1 = (a_01 - t1) * a_o1 * (1 - a_o1) * w5								
-∂E2/∂a_h1 = (a_02 - t2) * a_o2 * (1 - a_o2) * w7								
-∂E_total/∂a_h1 = (a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7								
-∂E_total/∂a_h2 = (a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8		
+**Fourth Set of Formula**				<br />
+∂E1/∂a_h1 = (a_01 - t1) * a_o1 * (1 - a_o1) * w5	<br />							
+∂E2/∂a_h1 = (a_02 - t2) * a_o2 * (1 - a_o2) * w7	<br />							
+∂E_total/∂a_h1 = (a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7   <br />								
+∂E_total/∂a_h2 = (a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8	<br />	
 
 
-**Fifth Set of Formula**	
-∂E_total/∂w1 = ∂E_total/∂a_h1 * ∂a_h1/∂h1 * ∂h1/∂w1					
-∂E_total/∂w2 = ∂E_total/∂a_h1 * ∂a_h1/∂h1 * ∂h1/∂w2					
-∂E_total/∂w3 = ∂E_total/∂a_h2 * ∂a_h2/∂h2 * ∂h2/∂w3					
+**Fifth Set of Formula**	<br />
+∂E_total/∂w1 = ∂E_total/∂a_h1 * ∂a_h1/∂h1 * ∂h1/∂w1    <br />					
+∂E_total/∂w2 = ∂E_total/∂a_h1 * ∂a_h1/∂h1 * ∂h1/∂w2	<br />				
+∂E_total/∂w3 = ∂E_total/∂a_h2 * ∂a_h2/∂h2 * ∂h2/∂w3	<br />				
 						
 
-**Sixth Set of Formula**
-**∂E_total/∂w1 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7) * a_h1 * (1 - a_h1) * i1    **												
-**∂E_total/∂w2 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7) * a_h1 * (1 - a_h1) * i2    **												
-**∂E_total/∂w3 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i1    **												
-**∂E_total/∂w4 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i2    **
+**Sixth Set of Formula**   <br />
+**∂E_total/∂w1 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7) * a_h1 * (1 - a_h1) * i1    **	<br />											
+**∂E_total/∂w2 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7) * a_h1 * (1 - a_h1) * i2    **	<br />											
+**∂E_total/∂w3 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i1    **	<br />											
+**∂E_total/∂w4 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i2    **<br />
 
 
 ** The Third and Sixth set of Formula are that are used for backward propagation**												
