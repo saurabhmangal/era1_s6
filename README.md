@@ -1,5 +1,5 @@
 **-------------------------------------------------------**
-**Code repository for ERA V1 Assignment 6: Backpropagation & Architectural Basics**
+Code repository for ERA V1 Assignment 6: Backpropagation & Architectural Basics
 **-------------------------------------------------------**
 
 **PART 1**
